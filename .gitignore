@@ -1,4 +1,4 @@
 node_modules
 data
 logs 
-includes/api/defs/private/index.js
+includes/api/defs/private/
