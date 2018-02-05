@@ -1,0 +1,135 @@
+body {
+  padding: 0px;
+  font: 16.7px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+h1{
+	font-family: Raleway;
+	font-size:900%;
+	padding:0;
+	margin:0;
+}
+.hidden{
+	display: none;
+}
+.pull-right{
+	float:right;
+}
+.pull-right:after{
+	content: '';
+	clear: right;
+}
+.spacer-25px{
+	height:25px;
+}
+.header{
+	border-bottom:5px solid #000000;
+	padding:29px 0 7px 20px;
+	margin-bottom:60px;
+}
+a {
+	cursor: pointer;
+  color: #00B7FF;
+}
+a:hover{
+	color:#00B888;
+	text-decoration: underline;
+}
+p{
+	margin:0;
+}
+ul{
+	list-style-type: none;
+	padding:0;
+}
+button{
+	outline: 0;
+	margin:6px;
+	min-width:180px;
+	border-radius: 0;
+	background-color: rgb(255,255,255);
+	color:#000;
+	font-size: 16.77789px;
+	padding:6px 60px;
+	font-family: 'PT Sans';
+	cursor: pointer;
+	border:1px solid #887;
+}
+button:hover:not(.disabled){
+	background-color: #505050;
+	color:#fff;
+}
+button:active{
+	background-color: #000000;
+}
+button.disabled{
+	background:#00C853;
+	color:#ffffff;
+}
+button.dark{
+	background-color: #999;
+	color: #fff;
+}
+button.clear{    
+	border: 0;
+    padding: 3px;
+    margin: 15px 0;
+	min-width:66px;
+	font-size: 14px;
+}
+.tbl > li{
+	padding-left:20px;
+	position: relative;
+	margin-bottom:200px;
+	padding-bottom:40px;
+	border-left:3px solid #008aff;/*008aff*/
+}
+.tbl > li:after{
+	content: '';
+	width:100%;
+	height: 4px;
+	position: absolute;
+	bottom:0;
+	left:0;
+	margin-bottom: -100px;
+	background-color: #000
+}
+.tbl-full{
+	width:100%;
+}
+.elm{
+	display: flex;
+  	flex-flow: column;
+	align-items: left;
+	vertical-align: middle;
+}
+.row > ul > li{
+	border-bottom: 1px solid rgba(0,0,0,.1)
+
+}
+.row > ul > li:last-child{
+	border-bottom: 0
+}
+.tbl-edit input.cell{
+	border:0 !important;
+	background-color: transparent !important;
+	padding:1px;
+	font-size:1em;
+	min-width:25%;
+}
+.console{
+	width:100%;
+	padding:10px;
+	max-height: 300px;
+	overflow-y: auto;
+	margin:5px 0;
+}
+.console p {
+    border-bottom: 1px solid #fee;
+    padding-bottom: 1px;
+}
+.section-main{
+	margin:0 1%;
+	width: 78%;
+	margin-left: auto;
+	margin-right: auto;
+}

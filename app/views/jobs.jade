@@ -1,0 +1,35 @@
+extends layout
+
+block content
+
+	div(class="section-main")
+		div(class="header")
+			h1= title
+		div(class="")
+			ul(class="tbl tbl-edit")
+				- for(var i =0; i<data.length; ++i)
+					- var job = data[i], id = job._id
+					- var ts = Date.now();
+					li(id=id, class="row")
+						ul(class="")
+							li name: 
+								input(type="text", class="edittable cell", value="#{job.name}", name="name") 
+							li status:
+								input(type="text", class="status cell edittable", value="#{job.status}", name="status") 
+							li delay:
+								input(type="text", class="delay cell edittable", value="#{job.delay}", name="delay") 
+							li interval: 
+								input(type="text", class="convert duration cell frequency hidden edittable", value="#{job.frequency}", name="frequency") 
+							li last run:  
+								input(type="text", class="convert timestamp cell lastRun hidden", disabled=true, value="#{job.lastRun}", name="lastRun") 
+							li next run: 
+								input(type="text", class="convert timestamp cell nextRun hidden", disabled=true, value="#{ts+((ts-parseInt(job.lastRun)) + parseInt(job.frequency))}", name="nextRun") 
+							li 
+								button(onclick="ui.buttons.run('#{id}')", class="run pull-right") run now
+						div(class="console")
+						button(class="clear dark hidden" onclick="ui.buttons.clear('#{id}')", data-target="#{id}") clear
+						div(class="spacer-25px")
+						div(class="history")
+						a(onclick="ui.buttons.history('#{id}')" class="") show history
+
+
